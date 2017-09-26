@@ -5,7 +5,7 @@
 
 #define OPTIMIZE__
 
-#include "SelectionSort.h"
+#include "InsertionSort.h"
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	selectionSort(v, 0, v.size());
+	insertionSort(v, 0, v.size());
 
 	for (const auto &i : v)
 		std::cout << i << " ";
