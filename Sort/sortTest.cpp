@@ -5,7 +5,7 @@
 
 #define OPTIMIZE__
 
-#include "QuickSort.h"
+#include "SelectionSort.h"
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	quickSort(v, 0, v.size());
+	selectionSort(v, 0, v.size());
 
 	for (const auto &i : v)
 		std::cout << i << " ";
