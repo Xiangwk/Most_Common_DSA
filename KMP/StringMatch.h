@@ -1,18 +1,17 @@
 #pragma once
 
 #include <string>
-#include <memory>
 
-int* buildNext(const std::string &p);
+int* buildNext(const char *str);
 
 #ifdef KMP__
 
 //KMP
-int match(const std::string &p, const std::string &s)
+int match(const char *p, const char *s)
 {
 	int *next = buildNext(p);
 	//这里注意一定要先把size()返回的值用int型保存，否则后面比较的时候会出问题，我们的i是有可能小于0的
-	int m = p.size(), n = s.size();
+	int m = strlen(p), n = strlen(s);
 	int i = 0, j = 0;
 	while (i < m && j < n)
 	{
@@ -34,9 +33,9 @@ int match(const std::string &p, const std::string &s)
 
 #ifdef KMP_OPTIMIZE
 
-int* buildNext(const std::string &p)
+int* buildNext(const char *p)
 {
-	int m = p.size();
+	int m = strlen(p);
 	int *next = new int[m];
 
 	int i = 0;
@@ -60,9 +59,9 @@ int* buildNext(const std::string &p)
 
 #else
 
-int* buildNext(const std::string &p)
+int* buildNext(const char *p)
 {
-	int m = p.size();
+	int m = strlen(p);
 	int i = 0;
 	int *next = new int[m];
 	int t = next[0] = -1;
@@ -88,10 +87,11 @@ int* buildNext(const std::string &p)
 #else
 
 //brute
-int match(const std::string &p, const std::string &s)
+int match(const char *p, const char *s)
 {
 	size_t i = 0, j = 0;
-	while (i < p.size() && j < s.size())
+	int m = strlen(p), n = strlen(s);
+	while (i < m && j < n)
 	{
 		if (p[i] == s[j])
 		{
