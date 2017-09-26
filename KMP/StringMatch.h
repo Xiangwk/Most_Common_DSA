@@ -10,7 +10,8 @@ int* buildNext(const char *str);
 int match(const char *p, const char *s)
 {
 	int *next = buildNext(p);
-	//这里注意一定要先把size()返回的值用int型保存，否则后面比较的时候会出问题，我们的i是有可能小于0的
+	//这里注意一定要先把size()返回的值用int型保存，否则后面比较的时候会出问题
+	//因为我们的i会有一个值是-1，代表一个通配符
 	int m = strlen(p), n = strlen(s);
 	int i = 0, j = 0;
 	while (i < m && j < n)
@@ -89,9 +90,10 @@ int* buildNext(const char *p)
 //brute
 int match(const char *p, const char *s)
 {
-	size_t i = 0, j = 0;
-	int m = strlen(p), n = strlen(s);
-	while (i < m && j < n)
+	int sp = strlen(p), ss = strlen(s);
+	int i = 0, j = 0;
+
+	while (i < sp && j < ss)
 	{
 		if (p[i] == s[j])
 		{

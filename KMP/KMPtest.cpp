@@ -1,15 +1,15 @@
 #include <iostream>
 #include <string>
 
-//#define KMP__
+#define KMP__
 //#define KMP_OPTIMIZE
 
 #include "StringMatch.h"
 
 int main()
 {
-	const char *pattern = "bc";
-	const char *str = "absbsbsandfbcadf";
+	const char *pattern = "abc";
+	const char *str = "aidjfiaesjijabc";
 
 	std::cout << match(pattern, str) << std::endl;
 
