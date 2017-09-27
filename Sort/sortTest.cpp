@@ -5,7 +5,7 @@
 
 #define OPTIMIZE__
 
-#include "InsertionSort.h"
+#include "HeapSort.h"
 
 int main()
 {
@@ -21,11 +21,12 @@ int main()
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	insertionSort(v, 0, v.size());
+	heapSort(v, 0, v.size());
 
 	for (const auto &i : v)
 		std::cout << i << " ";
 	std::cout << std::endl;
+
 
 	return 0;
 }
