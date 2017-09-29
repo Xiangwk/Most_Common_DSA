@@ -32,9 +32,7 @@ void percolateDown(std::vector<int> &v, size_t i, size_t n)
 void heapification(std::vector<int> &v)
 {
 	int sz = v.size();
-	int i = sz - 1;
-	while (2 * i + 2 > sz - 1 && 2 * i + 1 > sz - 1)
-		--i;
+	int i = (sz - 2) / 2;
 
 	while (i >= 0)
 		percolateDown(v, i--, sz);
