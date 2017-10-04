@@ -17,6 +17,8 @@ VectorÊÇÒ»ÖÖ·Ç³£·Ç³£·Ç³£³£ÓÃµÄÏßÐÔ±íÊý¾Ý½á¹¹£¡Àí½âVectorµÄ¶¯Ì¬À©ÈÝÊÇÀí½âC++±ê×¼¿
 ÄÚ´æ·ÖÅä²ÉÓÃÁËallocatorÀà£¬Ëü¿ÉÒÔÊ¹ÄÚ´æµÄ·ÖÅäºÍ¶ÔÏóµÄ¹¹Ôì·ÖÀë¿ªÀ´£¬ÕâÔÚÏñVectorÕâÖÖÐèÒª¶¯Ì¬·ÖÅäÄÚ´æµÄÈÝÆ÷ÖÐÊÇÒ»¸öÊ®·ÖÓÐÓÃµÄÌØÐÔ£¬
 ¸ÃÌØÐÔ¿ÉÒÔ±ÜÃâÎÞÒâÒåµÄ¶ÔÏó¹¹Ôì²úÉúµÄÀË·Ñ£¡
 
+ÆäÖÐemplace_back()Õâ¸öº¯ÊýÉæ¼°µ½¿É±ä²ÎÊýÄ£°åÖÐ²ÎÊý°üµÄ×ª·¢Õâ¸ö¸ÅÄî£¬ÊÇÒ»¸öºÜÓÐÓÃµÄ³ÉÔ±£¬Ëü¿ÉÒÔÖ±½ÓÔÚVectorÖÐ¹¹ÔìÔªËØ¶ø²»ÐèÒª½«ÔªËØ¸´ÖÆµ½VectorÖÐ£¡
+
 ## Ñ§Ï°²Î¿¼
 
 ¹ØÓÚÏòÁ¿µÄÔ­Àí¿ÉÒÔ²Î¿¼Çå»ªµË¿¡»ÔµÄ¡¶Êý¾Ý½á¹¹£¨C++ÓïÑÔ°æ£©¡·µÚ¶þÕÂ£»
