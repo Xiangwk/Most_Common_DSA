@@ -9,9 +9,14 @@
 //避免名称和标准库的有重复，我们使用自己的namespace
 namespace dsa
 {
+	template<typename> class Vector;
+	template<typename T>
+	void swap(Vector<T> &lhs, Vector<T> &rhs);
+
 	template<typename T>
 	class Vector
 	{
+		friend void swap<T>(Vector<T> &lhs, Vector<T> &rhs);
 	public:
 		//对于默认构造的空vector，我们不分配内存
 		Vector() : elements(nullptr), firstFree(nullptr), cap(nullptr) {}

@@ -119,5 +119,22 @@ int main()
 		std::cout << *iter << " ";
 	std::cout << std::endl << std::endl;
 
+	std::cout << "Test swap()\n" << std::endl;
+	using std::swap;
+	swap(vsCopy, vsOrigin);
+	std::cout << "\tSize: " << vsCopy.size() << std::endl;
+	std::cout << "\tCapacity: " << vsCopy.capacity() << std::endl;
+	std::cout << "\tvsCopy: ";
+	for (auto iter = vsCopy.begin(); iter != vsCopy.end(); ++iter)
+		std::cout << *iter << " ";
+	std::cout << std::endl << std::endl;
+
+	std::cout << "\tSize: " << vsOrigin.size() << std::endl;
+	std::cout << "\tCapacity: " << vsOrigin.capacity() << std::endl;
+	std::cout << "\tvsOrigin: ";
+	for (auto iter = vsOrigin.begin(); iter != vsOrigin.end(); ++iter)
+		std::cout << *iter << " ";
+	std::cout << std::endl << std::endl;
+
 	return 0;
 }

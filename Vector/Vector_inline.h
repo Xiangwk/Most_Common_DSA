@@ -6,6 +6,15 @@ namespace dsa
 	std::allocator<T> Vector<T>::alloc = std::allocator<T>();
 
 	template<typename T>
+	void swap<T>(Vector<T> &lhs, Vector<T> &rhs)
+	{
+		using std::swap;
+		swap(lhs.elements, rhs.elements);
+		swap(lhs.firstFree, rhs.firstFree);
+		swap(lhs.cap, rhs.cap);
+	}
+
+	template<typename T>
 	Vector<T>::Vector(std::size_t n)
 	{
 		elements = alloc.allocate(n);
