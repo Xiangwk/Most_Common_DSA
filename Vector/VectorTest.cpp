@@ -92,13 +92,14 @@ int main()
 	for (auto iter = vsCopy.begin(); iter != vsCopy.end(); ++iter)
 		std::cout << *iter << " ";
 	std::cout << std::endl << std::endl;
-	vsCopy.resize(10);
+	vsCopy.resize(10, "a");
 	std::cout << "\tSize: " << vsCopy.size() << std::endl;
 	std::cout << "\tCapacity: " << vsCopy.capacity() << std::endl;
 	std::cout << "\tvsCopy: ";
 	for (auto iter = vsCopy.begin(); iter != vsCopy.end(); ++iter)
 		std::cout << *iter << " ";
 	std::cout << std::endl << std::endl;
+	vsCopy.resize(5);
 	vsCopy.reserve(50);
 	std::cout << "\tSize: " << vsCopy.size() << std::endl;
 	std::cout << "\tCapacity: " << vsCopy.capacity() << std::endl;
@@ -107,7 +108,16 @@ int main()
 		std::cout << *iter << " ";
 	std::cout << std::endl << std::endl;
 
-	//vsEmpty.pop_back();
+	std::cout << "Test emplace_back()\n" << std::endl;
+	vsCopy.push_back("aaaaaa");
+	vsCopy.emplace_back("abc");
+	vsCopy.emplace_back(10, 'c');
+	std::cout << "\tSize: " << vsCopy.size() << std::endl;
+	std::cout << "\tCapacity: " << vsCopy.capacity() << std::endl;
+	std::cout << "\tvsCopy: ";
+	for (auto iter = vsCopy.begin(); iter != vsCopy.end(); ++iter)
+		std::cout << *iter << " ";
+	std::cout << std::endl << std::endl;
 
 	return 0;
 }

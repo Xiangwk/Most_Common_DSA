@@ -53,6 +53,13 @@ namespace dsa
 	}
 
 	template<typename T>
+	void Vector<T>::push_back(T &&e)
+	{
+		checkAndAlloc();
+		alloc.construct(firstFree++, std::move(e));
+	}
+
+	template<typename T>
 	void Vector<T>::pop_back()
 	{
 		if (empty())
@@ -64,6 +71,14 @@ namespace dsa
 	}
 
 	template<typename T>
+	template<typename... Args>
+	void Vector<T>::emplace_back(Args&&... args)
+	{
+		checkAndAlloc();
+		alloc.construct(firstFree++, std::forward<Args>(args)...);
+	}
+
+	template<typename T>
 	void Vector<T>::reserve(std::size_t n)
 	{
 		if (capacity() < n)
@@ -71,14 +86,14 @@ namespace dsa
 	}
 
 	template<typename T>
-	void Vector<T>::resize(std::size_t n)
+	void Vector<T>::resize(std::size_t n, const T &e)
 	{
 		std::size_t sz = size();
 		if (sz < n)
 		{
 
 			for (std::size_t i = 0; i < n - sz; ++i)
-				push_back(T());
+				push_back(e);
 		}
 		else if (n < sz)
 		{
@@ -127,7 +142,9 @@ namespace dsa
 		auto newdata = alloc.allocate(newCapacity);
 		auto dest = newdata;
 		auto elem = elements;
-		for (std::size_t i = 0; i < size(); ++i)
+		std::size_t sz = size();
+		//这里使用move，调用T的移动构造函数（如果有的话）来提高性能
+		for (std::size_t i = 0; i < sz; ++i)
 			alloc.construct(dest++, std::move(*elem++));
 		free();
 		elements = newdata;

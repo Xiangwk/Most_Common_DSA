@@ -1,5 +1,5 @@
 #pragma once
-//在visual studio下用这个宏定义来接触编译器对uninitialize_copy的限制
+//在visual studio下用这个宏定义来解除编译器对uninitialize_copy的限制
 #define _SCL_SECURE_NO_WARNINGS
 
 #include <memory>
@@ -33,10 +33,14 @@ namespace dsa
 		bool empty() const { return elements == firstFree; }
 
 		void push_back(const T &e);
+		void push_back(T &&e);
 		void pop_back();
+		//直接使用T的构造函数在Vector中构造元素
+		template<typename... Args>
+		void emplace_back(Args&&...);
 
 		void reserve(std::size_t);
-		void resize(std::size_t);
+		void resize(std::size_t n, const T &e = T());
 
 	private:
 		T *elements;
