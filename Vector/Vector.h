@@ -21,7 +21,7 @@ namespace dsa
 		//对于默认构造的空vector，我们不分配内存
 		Vector() : elements(nullptr), firstFree(nullptr), cap(nullptr) {}
 		//用T的默认构造函数初始化一个有n个T元素的vector
-		Vector(std::size_t n);
+		explicit Vector(std::size_t n);
 		//使用初始化列表初始化一个vector
 		Vector(const std::initializer_list<T> &li);
 

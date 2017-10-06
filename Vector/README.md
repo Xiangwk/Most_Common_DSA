@@ -14,6 +14,8 @@ VectorÊÇÒ»ÖÖ·Ç³£·Ç³£·Ç³£³£ÓÃµÄÏßÐÔ±íÊý¾Ý½á¹¹£¡Àí½âVectorµÄ¶¯Ì¬À©ÈÝÊÇÀí½âC++±ê×¼¿
 
 ¿âÖÐVectorµÄÊµÏÖ²ÉÓÃÁËÀàÄ£°å£¬ÒÔÊ¹ÎÒÃÇµÄVector¿ÉÒÔÈÝÄÉ¸÷ÖÖÀàÐÍ£»
 
+Vector.hÖÐÊÇ³ÉÔ±ÉùÃ÷£¬Vector_inline.hÖÐÊÇ³ÉÔ±µÄÊµÏÖ£¬Êµ¼ÊÊ¹ÓÃÖÐÖ»ÐèÒª°üº¬Vector.h¾Í¿ÉÒÔÁË£¬ÎÒÃÇÔÚVector.hµÄÄ©Î²°üº¬ÁËÍ·ÎÄ¼þVector_inline.h£¬ÕâÑù·Ö¿ªÐ´¿ÉÒÔ¿´µÃ¸üÇå³þ¡£
+
 ÄÚ´æ·ÖÅä²ÉÓÃÁËallocatorÀà£¬Ëü¿ÉÒÔÊ¹ÄÚ´æµÄ·ÖÅäºÍ¶ÔÏóµÄ¹¹Ôì·ÖÀë¿ªÀ´£¬ÕâÔÚÏñVectorÕâÖÖÐèÒª¶¯Ì¬·ÖÅäÄÚ´æµÄÈÝÆ÷ÖÐÊÇÒ»¸öÊ®·ÖÓÐÓÃµÄÌØÐÔ£¬
 ¸ÃÌØÐÔ¿ÉÒÔ±ÜÃâÎÞÒâÒåµÄ¶ÔÏó¹¹Ôì²úÉúµÄÀË·Ñ£¡
 
